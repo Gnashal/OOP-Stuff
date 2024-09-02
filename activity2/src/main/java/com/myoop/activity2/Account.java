@@ -45,7 +45,7 @@ public class Account {
             return true;
             }
         } else {
-            System.out.println("You dont have enough balance to proceed with the withdrawal\n");
+            System.out.println("You don't have enough balance to proceed with the withdrawal\n");
         }
         return false;
     }
