@@ -48,7 +48,7 @@ public class Vehicle  {
     
     public boolean decel() {
         if (current_speed >= 0) {
-            this.current_speed += 10;
+            this.current_speed -= 10;
              System.out.println("A " + manufacuter+ " " + model+ " travelling " + current_speed + " " + "to " + top_speed + "\n");
             return true;
         } else {
