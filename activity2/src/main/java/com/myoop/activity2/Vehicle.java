@@ -34,7 +34,7 @@ public class Vehicle  {
     
     
     public boolean accel() {
-       if (current_speed < top_speed) {
+       if (current_speed < top_speed && isDead == Status.WORKING) {
            current_speed += 10;
            System.out.println("A " + manufacuter+ " " + model+ " travelling " + current_speed + " " + "to " + top_speed + "\n");
            return true;
@@ -58,7 +58,11 @@ public class Vehicle  {
     }
     
     public void repair(Vehicle v) {
-        v.isDead = Status.WORKING;
+        if (v.isDead == Status.WORKING) {
+            System.out.println("Car is still in working condition\n");
+        } else {
+            v.isDead = Status.WORKING;
+        }
     }
 
     @Override
