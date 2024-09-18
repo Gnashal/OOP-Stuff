@@ -21,6 +21,11 @@ public class PieceEmployee {
 
    public PieceEmployee() {}
 
+   public PieceEmployee (String empName, String empID) {
+    this.empName = empName;
+    this.empID = empID;
+}
+
     public PieceEmployee(int totalPiecesFinished, double ratePerPiece, String empName, String empID){
         this.totalPiecesFinished = totalPiecesFinished;
         this.ratePerPiece = ratePerPiece;

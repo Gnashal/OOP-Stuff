@@ -24,6 +24,12 @@ public class BasedPlusCommissionEmployee {
 
     public BasedPlusCommissionEmployee() {}
 
+    
+    public BasedPlusCommissionEmployee (String empName, String empID) {
+        this.empName = empName;
+        this.empID = empID;
+    }
+
     public BasedPlusCommissionEmployee(int totalSales, double baseSalary,String empName, String empID){
         this.totalSales = totalSales;
         this.baseSalary = baseSalary;

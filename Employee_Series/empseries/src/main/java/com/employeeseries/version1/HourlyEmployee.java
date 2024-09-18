@@ -26,6 +26,12 @@ public class HourlyEmployee {
 
     }
 
+    public HourlyEmployee (String empName, String empID) {
+        this.empName = empName;
+        this.empID = empID;
+    }
+    
+
     public HourlyEmployee(float hoursWorked, double hourlyRate, String empName, String empID){
         this.hoursWorked = hoursWorked;
         this.hourlyRate = hourlyRate;
@@ -38,7 +44,7 @@ public class HourlyEmployee {
     }
 
     public void setTotalHoursWorked(float totalHoursWorked) {
-        this.hourlyRate = totalHoursWorked;
+        this.hoursWorked = totalHoursWorked;
     }
 
     public double getRatePerHour() {
@@ -80,6 +86,12 @@ public class HourlyEmployee {
 
         return salary;
     }
+    public void displayHourlyDefault() {
+    
+        System.out.printf("%-20s %-15s %-15s %-15s%n", "Name", "ID", "Hours Worked", "Hourly Rate");
+        System.out.println("-----------------------------------------------------------");
+        System.out.printf("%-20s %-15s %-15.2f $%-14.2f%n", getEmpName(), getEmpID(), getTotalHoursWorked(), getRatePerHour());
+      }
     
 
 

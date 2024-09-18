@@ -21,6 +21,11 @@ public class CommissionEmployee {
 
     public CommissionEmployee() {}
 
+    public CommissionEmployee (String empName, String empID) {
+        this.empName = empName;
+        this.empID = empID;
+    }
+
     public CommissionEmployee(int totalSales, String empName, String empID){
         this.totalSales = totalSales;
         this.empName = empName;
