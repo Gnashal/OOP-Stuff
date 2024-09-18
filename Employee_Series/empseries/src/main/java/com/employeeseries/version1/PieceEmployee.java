@@ -76,6 +76,13 @@ public class PieceEmployee {
        return salary += totalPiecesFinished * ratePerPiece;
     }
 
+    public void displayPEDefault() {
+    
+        System.out.printf("%-20s %-15s %-15s %-15s%n", "Name", "ID", "Rate Per Piece", "Total Pieces Finished");
+        System.out.println("-----------------------------------------------------------");
+        System.out.printf("%-20s %-15s %-15.2f $%-14d%n\n", getEmpName(), getEmpID(), getRatePerPiece(), getTotalPiecesFinished());
+      }
+
     @Override
     public String toString() {
         return "Pieces Finished: " + totalPiecesFinished + "\n"+"Rate Per Piece: " + ratePerPiece + "\n" + "Employee Name: " + empName + "\n" + 

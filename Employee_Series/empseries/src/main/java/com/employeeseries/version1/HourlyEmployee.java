@@ -90,7 +90,7 @@ public class HourlyEmployee {
     
         System.out.printf("%-20s %-15s %-15s %-15s%n", "Name", "ID", "Hours Worked", "Hourly Rate");
         System.out.println("-----------------------------------------------------------");
-        System.out.printf("%-20s %-15s %-15.2f $%-14.2f%n", getEmpName(), getEmpID(), getTotalHoursWorked(), getRatePerHour());
+        System.out.printf("%-20s %-15s %-15.2f $%-14.2f%n\n", getEmpName(), getEmpID(), getTotalHoursWorked(), getRatePerHour());
       }
     
 

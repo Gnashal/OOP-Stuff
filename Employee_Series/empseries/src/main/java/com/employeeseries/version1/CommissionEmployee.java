@@ -72,6 +72,14 @@ public class CommissionEmployee {
     }
 
 
+    public void displayCommDefault() {
+    
+        System.out.printf("%-20s %-15s %-15s%n", "Name", "ID", "Total Sales");
+        System.out.println("-----------------------------------------------------------");
+        System.out.printf("%-20s %-15s %-15d\n", getEmpName(), getEmpID(), getTotalSales());
+      }
+    
+
 
     @Override
     public String toString() {

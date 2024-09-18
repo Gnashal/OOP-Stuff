@@ -13,12 +13,36 @@ public class Main { public static void main(String[] args) {
   displayBasedPlusCommissionEmployees();
 
   System.out.println("DEFAULT CONSTRUCTORS USED: \n\n");
+  // HOURLY EMPLOYEES
   HourlyEmployee defHEmp = new HourlyEmployee();
   defHEmp.setEmpID("23100267");
   defHEmp.setEmpName("Yousif");
   defHEmp.setRatePerHour(25.25);
   defHEmp.setTotalHoursWorked(801.42f);
   defHEmp.displayHourlyDefault();
+
+  // BPC EMPLOYEES
+  BasedPlusCommissionEmployee bpcDef = new BasedPlusCommissionEmployee();
+  bpcDef.setBaseSalary(1000.23);
+  bpcDef.setEmpID("24100782");
+  bpcDef.setEmpName("Quirico");
+  bpcDef.setTotalSales(1000);
+  bpcDef.displayBPCDefault();
+
+  // COMMISSION EMPLOYEES
+  CommissionEmployee cmDefEmp = new CommissionEmployee();
+  cmDefEmp.setEmpID("25100231");
+  cmDefEmp.setEmpName("Romero");
+  cmDefEmp.setTotalSales(1232);
+  cmDefEmp.displayCommDefault();
+
+  // PIECE EMPLOYEE
+  PieceEmployee pDefEmp = new PieceEmployee();
+  pDefEmp.setEmpID("2613213");
+  pDefEmp.setEmpName("Ceballos");
+  pDefEmp.setRatePerPiece(27.23);
+  pDefEmp.setTotalPiecesFinished(45654);
+  pDefEmp.displayPEDefault();
 }
 
   private static void displayHourlyEmployees() {
