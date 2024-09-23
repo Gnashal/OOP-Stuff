@@ -79,6 +79,17 @@ public class CommissionEmployee {
         System.out.printf("%-20s %-15s %-15d\n", getEmpName(), getEmpID(), getTotalSales());
       }
     
+      public void displayCommissionEmployees() {
+        System.out.printf("%-20s %-15s %-15s%n", "Name", "ID", "Commission");
+        System.out.println("-----------------------------------------------------------");
+        System.out.printf("%-20s %-15s $%-14d%n", getEmpName(), getEmpID(), getTotalSales());
+      }
+
+      public void displayCommissionEmployees_2() {
+        System.out.printf("%-20s %-15s %-15s%n", "Name", "ID", "Commission");
+        System.out.println("-----------------------------------------------------------");
+        System.out.printf("%-20s %-15s %-15s%n", getEmpName(), getEmpID(), "N/A");
+      }
 
 
     @Override

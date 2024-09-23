@@ -91,6 +91,17 @@ public class BasedPlusCommissionEmployee {
         System.out.printf("%-20s %-15s %-15.2f $%-14d%n\n", getEmpName(), getEmpID(), getBaseSalary(), getTotalSales());
       }
 
+      public void displayBasedPlusCommissionEmployees() {
+        System.out.printf("%-20s %-15s %-15s %-15s%n", "Name", "ID", "Commission", "Base Salary");
+        System.out.println("-----------------------------------------------------------");
+        System.out.printf("%-20s %-15s $%-14d $%-14.2f%n", getEmpName(), getEmpID(), getTotalSales(), getBaseSalary());
+      }
+      public void displayBasedPlusCommissionEmployees_2() {
+        System.out.printf("%-20s %-15s %-15s %-15s%n", "Name", "ID", "Commission", "Base Salary");
+        System.out.println("-----------------------------------------------------------");
+        System.out.printf("%-20s %-15s %-15s %-15s%n", getEmpName(), getEmpID(), "N/A", "N/A");
+      }
+
     @Override
     public String toString() {
         return "Total Sales: " + totalSales + "\n"+ "Base Salary: " + baseSalary + "\n" + "Employee Name: " + empName + "\n" + 

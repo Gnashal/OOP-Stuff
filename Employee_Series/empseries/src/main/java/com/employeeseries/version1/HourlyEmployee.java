@@ -92,7 +92,23 @@ public class HourlyEmployee {
         System.out.println("-----------------------------------------------------------");
         System.out.printf("%-20s %-15s %-15.2f $%-14.2f%n\n", getEmpName(), getEmpID(), getTotalHoursWorked(), getRatePerHour());
       }
+
+      public void displayHourlyEmployees() {
+        System.out.printf("%-20s %-15s %-15s %-15s%n", "Name", "ID", "Hours Worked", "Hourly Rate");
+        System.out.println("-----------------------------------------------------------");
+        
+        
+        System.out.printf("%-20s %-15s %-15.2f $%-14.2f%n", getEmpName(), getEmpID(), getTotalHoursWorked(), getRatePerHour());
     
+      }
+
+      public void displayHourlyEmployees_2() {
+        System.out.printf("%-20s %-15s %-15s %-15s%n", "Name", "ID", "Hours Worked", "Hourly Rate");
+        System.out.println("-----------------------------------------------------------");
+        
+        System.out.printf("%-20s %-15s %-15s %-15s%n", getEmpName(), getEmpID(), "N/A", "N/A");
+
+      }
 
 
     @Override

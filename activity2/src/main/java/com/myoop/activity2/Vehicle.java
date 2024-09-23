@@ -68,15 +68,15 @@ public class Vehicle  {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Vehicle{");
-        sb.append("Top Speed: ").append(top_speed);
-        sb.append("Current Speed: ").append(current_speed);
-        sb.append("Color: ").append(color);
-        sb.append("Model: ").append(model);
-        sb.append("Manufacturer: ").append(manufacuter);
-        sb.append("Plate Number: ").append(plate_number);
-        sb.append("Car Status: ").append(isDead);
-        sb.append('}');
+        sb.append("Vehicle{")
+            .append("Top Speed: ").append(top_speed)
+            .append("Current Speed: ").append(current_speed)
+            .append("Color: ").append(color)
+            .append("Model: ").append(model)
+            .append("Manufacturer: ").append(manufacuter)
+            .append("Plate Number: ").append(plate_number)
+            .append("Car Status: ").append(isDead)
+            .append('}');
         return sb.toString();
     }
 
