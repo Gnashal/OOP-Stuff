@@ -21,11 +21,6 @@ public class Hourly extends Employee {
         this.hourlyRate = hourlyRate;
     }
 
-    public Hourly(Employee emp, float hoursWorked, double hourlyRate) {
-        super(emp.name, emp.id);
-        this.hoursWorked = hoursWorked;
-        this.hourlyRate = hourlyRate;
-    }
 
     public Hourly(float hoursWorked, double hourlyRate, String name, int id) {
         super(name, id);
@@ -82,6 +77,12 @@ public class Hourly extends Employee {
     @Override
     public void setName(String name) {
         super.setName(name);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Hours Worked: " + hoursWorked + "\n"
+        + "Hourly Rate: " + hourlyRate + "\n";
     }
 
 }

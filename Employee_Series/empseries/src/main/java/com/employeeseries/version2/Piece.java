@@ -77,4 +77,10 @@ public class Piece extends Employee {
     public String getName() {
         return super.getName();
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Total Peices Finished: " + totalPiecesFinished + "\n"
+        + "Rate per Piece: " + ratePerPiece + "\n";
+    }
 }

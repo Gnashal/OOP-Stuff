@@ -31,4 +31,10 @@ public class Employee {
         System.out.println("-----------------------------------------------------------");
         System.out.printf("%-20s %-15sf%n\n", getName(), getId());
     }
+
+    
+    @Override
+    public String toString() {
+        return "Name: " + name + "\n"+ "\n" + "ID: " + id +"\n";
+    }
 }
