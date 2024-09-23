@@ -11,7 +11,7 @@ public class Piece extends Employee {
         super(e.getName(), e.getId());
     }
 
-    public Piece(Employee e, String name, int id) {
+    public Piece( String name, int id) {
         super(name, id);
     }
 
@@ -58,24 +58,8 @@ public class Piece extends Employee {
         return salary += totalPiecesFinished * ratePerPiece;
     }
 
-    @Override
-    public void setId(int id) {
-        super.setId(id);
-    }
-
-    @Override
-    public void setName(String name) {
-        super.setName(name);
-    }
-
-    @Override
-    public int getId() {
-        return super.getId();
-    }
-
-    @Override
-    public String getName() {
-        return super.getName();
+    public void displayPieceEmployees() {
+        System.out.println("Piece Employee: " + toString() + "Computed Salary: " + computeSalary() + "\n");
     }
 
     @Override

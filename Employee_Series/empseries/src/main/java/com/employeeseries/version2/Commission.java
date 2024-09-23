@@ -49,22 +49,8 @@ public class Commission extends Employee {
        return salary;
     }
 
-    @Override
-    public void setId(int id) {
-        super.setId(id);
-    }
-    @Override
-    public int getId() {
-        return super.getId();
-    }
-    @Override
-    public String getName() {
-        return super.getName();
-    }
-
-    @Override
-    public void setName(String name) {
-        super.setName(name);
+    public void displayCommisionEmployees() {
+        System.out.println("Commision Employee: " + toString() + "Computed Salary:  " + computeSalary() + "\n");
     }
 
     @Override

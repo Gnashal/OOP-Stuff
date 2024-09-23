@@ -58,25 +58,8 @@ public class Hourly extends Employee {
 
         return salary;
     }
-
-    @Override
-    public int getId() {
-        return super.getId();
-    }
-
-    @Override
-    public String getName() {
-        return super.getName();
-    }
-
-    @Override
-    public void setId(int id) {
-        super.setId(id);
-    }
-
-    @Override
-    public void setName(String name) {
-        super.setName(name);
+    public void displayHourlyEmployees() {
+        System.out.println("Hourly Employee: " + toString() + "Computed Salary: " + computeSalary() + "\n");
     }
 
     @Override

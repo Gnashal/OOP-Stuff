@@ -28,45 +28,13 @@ public class BasedPlus extends Commission{
     }
 
     public double computeSalary() {
-        int totalSales = super.totalSales;
-        if (totalSales < 10000) {
-         baseSalary += totalSales / 0.5;
-        } else if (totalSales < 100000 && totalSales >= 10000) {
-         baseSalary += totalSales / 0.10;
-        } else if (totalSales < 1000000) {
-         baseSalary += totalSales / 0.20;
-        } else if (totalSales >= 1000000) {
-         baseSalary += totalSales / 0.30;
-        }
-        return this.baseSalary;
+        return this.baseSalary + super.computeSalary();
      }
 
+     public void displayBasedCommisionEmployees() {
+        System.out.println("Commision Employee: " + toString() + "Computed Salary: " + computeSalary() + "\n");
+    }
 
-
-    @Override
-    public void setTotalSales(int totalSales) {
-        super.setTotalSales(totalSales);
-    }
-    @Override
-    public void setName(String name) {
-        super.setName(name);
-    }
-    @Override
-    public void setId(int id) {
-        super.setId(id);
-    }
-    @Override
-    public int getId() {
-        return super.getId();
-    }
-    @Override
-    public String getName() {
-        return super.getName();
-    }
-    @Override
-    public int getTotalSales() {
-        return super.getTotalSales();
-    }
 
     @Override
     public String toString() {

@@ -26,12 +26,15 @@ public class Employee {
         this.name = name;
     }
 
-    public void displayEmployee() {
-        System.out.printf("%-20s %-15s%n", "Name", "ID");
-        System.out.println("-----------------------------------------------------------");
-        System.out.printf("%-20s %-15sf%n\n", getName(), getId());
-    }
+    // public void displayEmployee() {
+    //     System.out.printf("%-20s %-15s%n", "Name", "ID");
+    //     System.out.println("-----------------------------------------------------------");
+    //     System.out.printf("%-20s %-15sf%n\n", getName(), getId());
+    // }
 
+    public void displayEmployee() {
+        System.out.println("Default Employee: " + toString());
+    }
     
     @Override
     public String toString() {
