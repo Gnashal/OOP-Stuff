@@ -9,6 +9,10 @@ import com.employeeseries.version2.Commission;
 import com.employeeseries.version2.Employee;
 import com.employeeseries.version2.Hourly;
 import com.employeeseries.version2.Piece;
+import com.employeeseries.version3.EmployeeVer3;
+import com.employeeseries.version3.HourlyVer3;
+import com.employeeseries.version3.MyDate;
+import com.employeeseries.version3.Name;
 
 public class Main { public static void main(String[] args) {
   System.out.println("VERSION 1: ");
@@ -16,6 +20,9 @@ public class Main { public static void main(String[] args) {
 
   System.out.println("VERSION 2: ");
   displayVersion2();  
+
+  System.out.println("VERSION 3: ");
+  displayVersion3();  
 }
 
 
@@ -153,6 +160,25 @@ public class Main { public static void main(String[] args) {
     defPieceEmp.setTotalPiecesFinished(45654);
     defPieceEmp.displayEmployee();
     defPieceEmp.displayPieceEmployees();
+}
+
+public static void displayVersion3() {
+  // EMPLOYEE
+  EmployeeVer3 employee1 = new EmployeeVer3(
+    new Name("Yousif", "Ceballos", "Romero"), 
+    new MyDate(23, 9, 2005), 
+    new MyDate(18, 10, 2004), 
+    23100267);
+  employee1.display();
+  EmployeeVer3 employee2 = new EmployeeVer3(
+    new Name("Haruhi", "Suzumiya"), 
+    new MyDate(23, 9, 2005), 
+    new MyDate(18, 10, 2004), 
+    23100267);
+  employee2.display();
+
+  HourlyVer3 hourlyEmpV3_1 = new HourlyVer3(42.00f, 900.23, employee1);
+  hourlyEmpV3_1.displayHourlyEmployees();
 }
 
   

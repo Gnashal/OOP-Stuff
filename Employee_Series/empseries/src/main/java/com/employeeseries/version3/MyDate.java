@@ -38,6 +38,13 @@ public class MyDate {
     public int getYear() {
         return year;
     }
+    public MyDate getFullDate() {
+        return this;
+    }
+
+    public void display() {
+        System.out.println(this.month + "/" + this.day + "/" + this.year);
+    }
 
     @Override
     public String toString() {
