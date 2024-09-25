@@ -1,7 +1,6 @@
 package com.employeeseries.version3;
 
-
-public class PieceVer3 extends EmployeeVer3{
+public class PieceVer3 extends EmployeeVer3 {
     private int totalPiecesFinished;
     private double ratePerPiece;
 
@@ -18,7 +17,7 @@ public class PieceVer3 extends EmployeeVer3{
     }
 
     public PieceVer3(EmployeeVer3 e, int totalPiecesFinished, double ratePerPiece) {
-        super(e.empName.getFullName(),e.dateHired.getFullDate(),e.birthDate.getFullDate(), e.getId());
+        super(e.empName.getFullName(), e.dateHired.getFullDate(), e.birthDate.getFullDate(), e.getId());
         this.totalPiecesFinished = totalPiecesFinished;
         this.ratePerPiece = ratePerPiece;
     }
@@ -46,22 +45,25 @@ public class PieceVer3 extends EmployeeVer3{
     }
 
     public double computeSalary() {
-        float salary = 0;
-        while (totalPiecesFinished >= 100) {
-            ratePerPiece *= 10;
-            totalPiecesFinished -= 100;
-        }
+        double salary = 0;
+        int bonusPieces = totalPiecesFinished / 100;
+        int remainingPieces = totalPiecesFinished % 100;
 
-        return salary += totalPiecesFinished * ratePerPiece;
+        salary += (bonusPieces * 100 * ratePerPiece * 10);
+        salary += (remainingPieces * ratePerPiece);
+
+        return salary;
     }
 
     public void displayPieceEmployees() {
-        System.out.println("Piece Employee: " + toString() + "Computed Salary: " + computeSalary() + "\n");
+        System.out.println("Piece Employee: ");
+        super.display();
+        System.out.println("Computed Salary: " + computeSalary() + "\n");
     }
 
     @Override
     public String toString() {
         return super.toString() + "Total Peices Finished: " + totalPiecesFinished + "\n"
-        + "Rate per Piece: " + ratePerPiece + "\n";
+                + "Rate per Piece: " + ratePerPiece + "\n";
     }
 }

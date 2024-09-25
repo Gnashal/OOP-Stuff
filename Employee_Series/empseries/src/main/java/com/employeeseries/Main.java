@@ -13,20 +13,19 @@ import com.employeeseries.version3.EmployeeVer3;
 import com.employeeseries.version3.HourlyVer3;
 import com.employeeseries.version3.MyDate;
 import com.employeeseries.version3.Name;
+import com.employeeseries.version3.PieceVer3;
 
-public class Main { public static void main(String[] args) {
-  System.out.println("VERSION 1: ");
-  displayVersion1();  
+public class Main {
+  public static void main(String[] args) {
+    System.out.println("VERSION 1: ");
+    displayVersion1();
 
-  System.out.println("VERSION 2: ");
-  displayVersion2();  
+    System.out.println("VERSION 2: ");
+    displayVersion2();
 
-  System.out.println("VERSION 3: ");
-  displayVersion3();  
-}
-
-
- 
+    System.out.println("VERSION 3: ");
+    displayVersion3();
+  }
 
   public static void displayVersion1() {
     System.out.println("NON-DEFAULT CONSTRUCTORS USED: \n");
@@ -41,7 +40,7 @@ public class Main { public static void main(String[] args) {
     PieceEmployee pieceEmp2 = new PieceEmployee("Gnashal", "6237267");
     pieceEmp2.displayPieceEmployees_2();
     // COMMISSON
-    CommissionEmployee commisionEmp1 = new CommissionEmployee(321312,"Ceballos", "26100267");
+    CommissionEmployee commisionEmp1 = new CommissionEmployee(321312, "Ceballos", "26100267");
     commisionEmp1.displayCommissionEmployees();
     CommissionEmployee commisionEmp2 = new CommissionEmployee("Sollabec", "76200762");
     commisionEmp2.displayCommissionEmployees_2();
@@ -50,7 +49,7 @@ public class Main { public static void main(String[] args) {
     BPEmp1.displayBasedPlusCommissionEmployees();
     BasedPlusCommissionEmployee BPEmp2 = new BasedPlusCommissionEmployee("QuiQui", "1236456754");
     BPEmp2.displayBasedPlusCommissionEmployees_2();
-  
+
     System.out.println("DEFAULT CONSTRUCTORS USED: \n\n");
     // HOURLY EMPLOYEES
     HourlyEmployee defHEmp = new HourlyEmployee();
@@ -59,7 +58,7 @@ public class Main { public static void main(String[] args) {
     defHEmp.setRatePerHour(25.25);
     defHEmp.setTotalHoursWorked(801.42f);
     defHEmp.displayHourlyDefault();
-  
+
     // BPC EMPLOYEES
     BasedPlusCommissionEmployee bpcDef = new BasedPlusCommissionEmployee();
     bpcDef.setBaseSalary(1000.23);
@@ -67,14 +66,14 @@ public class Main { public static void main(String[] args) {
     bpcDef.setEmpName("Quirico");
     bpcDef.setTotalSales(1000);
     bpcDef.displayBPCDefault();
-  
+
     // COMMISSION EMPLOYEES
     CommissionEmployee cmDefEmp = new CommissionEmployee();
     cmDefEmp.setEmpID("25100231");
     cmDefEmp.setEmpName("Romero");
     cmDefEmp.setTotalSales(1232);
     cmDefEmp.displayCommDefault();
-  
+
     // PIECE EMPLOYEE
     PieceEmployee pDefEmp = new PieceEmployee();
     pDefEmp.setEmpID("2613213");
@@ -84,25 +83,23 @@ public class Main { public static void main(String[] args) {
     pDefEmp.displayPEDefault();
   }
 
-
-
   public static void displayVersion2() {
     System.out.println("NON-DEFAULT CONSTRUCTORS USED: \n");
 
     // HOURLY EMPLOYEES
     Hourly hourlyEmp1 = new Hourly(41.25f, 25.5, "Yousif", 23100267);
     hourlyEmp1.displayHourlyEmployees();
-    
+
     Hourly hourlyEmp2 = new Hourly("WatashiwaStah", 8672192);
     hourlyEmp2.setHourlyRate(5546.23);
     hourlyEmp2.setHoursWorked(2323.67f);
     hourlyEmp2.displayHourlyEmployees();
 
     // PIECE EMPLOYEES
-    Employee empP = new Employee( "Quririco", 25100267);
-    Piece pieceEmp1 = new Piece(empP,340, 24.7);
+    Employee empP = new Employee("Quririco", 25100267);
+    Piece pieceEmp1 = new Piece(empP, 340, 24.7);
     pieceEmp1.displayPieceEmployees();
-    
+
     Piece pieceEmp2 = new Piece("Gnashal", 6237267);
     pieceEmp2.setRatePerPiece(98123.10);
     pieceEmp2.setTotalPiecesFinished(10000);
@@ -110,7 +107,7 @@ public class Main { public static void main(String[] args) {
     // COMMISSION EMPLOYEES
     Commission commissionEmp1 = new Commission(321312, "Ceballos", 26100267);
     commissionEmp1.displayCommisionEmployees();
-    
+
     Commission commissionEmp2 = new Commission("Sollabec", 76200762);
     commissionEmp2.setTotalSales(1231231);
     commissionEmp2.displayCommisionEmployees();
@@ -118,7 +115,7 @@ public class Main { public static void main(String[] args) {
     // BASED PLUS EMPLOYEES
     BasedPlus basedPlusEmp1 = new BasedPlus("Romero", 27100267, 213213, 5000.00);
     basedPlusEmp1.displayBasedCommisionEmployees();
-    
+
     BasedPlus basedPlusEmp2 = new BasedPlus("QuiQui", 1236456754, 0, 0);
     basedPlusEmp2.setBaseSalary(8979.23);
     basedPlusEmp2.setTotalSales(231231);
@@ -157,30 +154,30 @@ public class Main { public static void main(String[] args) {
     defPieceEmp.setId(2613213);
     defPieceEmp.setName("Ceballos");
     defPieceEmp.setRatePerPiece(27.23);
-    defPieceEmp.setTotalPiecesFinished(45654);
+    defPieceEmp.setTotalPiecesFinished(23);
     defPieceEmp.displayEmployee();
     defPieceEmp.displayPieceEmployees();
-}
+  }
 
-public static void displayVersion3() {
-  // EMPLOYEE
-  EmployeeVer3 employee1 = new EmployeeVer3(
-    new Name("Yousif", "Ceballos", "Romero"), 
-    new MyDate(23, 9, 2005), 
-    new MyDate(18, 10, 2004), 
-    23100267);
-  employee1.display();
-  EmployeeVer3 employee2 = new EmployeeVer3(
-    new Name("Haruhi", "Suzumiya"), 
-    new MyDate(23, 9, 2005), 
-    new MyDate(18, 10, 2004), 
-    23100267);
-  employee2.display();
+  public static void displayVersion3() {
+    // EMPLOYEE
+    EmployeeVer3 employee1 = new EmployeeVer3(
+        new Name("Yousif", "Ceballos", "Romero"),
+        new MyDate(23, 9, 2005),
+        new MyDate(18, 10, 2004),
+        23100267);
+    employee1.display();
+    EmployeeVer3 employee2 = new EmployeeVer3(
+        new Name("Haruhi", "Suzumiya"),
+        new MyDate(23, 9, 2005),
+        new MyDate(18, 10, 2004),
+        23100267);
+    employee2.display();
 
-  HourlyVer3 hourlyEmpV3_1 = new HourlyVer3(42.00f, 900.23, employee1);
-  hourlyEmpV3_1.displayHourlyEmployees();
-}
+    HourlyVer3 hourlyEmpV3_1 = new HourlyVer3(42.00f, 900.23, employee1);
+    hourlyEmpV3_1.displayHourlyEmployees();
+    PieceVer3 pieceEmpV3_1 = new PieceVer3(employee2, 300, 25.43);
+    pieceEmpV3_1.displayPieceEmployees();
+  }
 
-  
- 
 }
