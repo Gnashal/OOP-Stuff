@@ -32,6 +32,15 @@ public class HourlyVer3 extends EmployeeVer3{
         this.hoursWorked = hoursWorked;
         this.hourlyRate = hourlyRate;
     }
+    public HourlyVer3(Name name, MyDate hire, MyDate dob, int id, float hourlyRate, float hoursWorked) {
+        super(name, id);
+        super.setBirthDate(dob);
+        super.setDateHired(hire);
+        this.hourlyRate = hourlyRate;
+        this.hoursWorked = hoursWorked;
+    }
+    
+    
 
     public double getHourlyRate() {
         return hourlyRate;

@@ -27,6 +27,14 @@ public class PieceVer3 extends EmployeeVer3 {
         this.totalPiecesFinished = totalPiecesFinished;
         this.ratePerPiece = ratePerPiece;
     }
+    public PieceVer3(Name name, MyDate hire, MyDate dob, int id, int totalPiecesFinished, double ratePerPiece) {
+        super(name, id);
+        super.setBirthDate(dob);
+        super.setDateHired(hire);
+        this.totalPiecesFinished = totalPiecesFinished;
+        this.ratePerPiece = ratePerPiece;
+    }
+    
 
     public void setRatePerPiece(double ratePerPiece) {
         this.ratePerPiece = ratePerPiece;
@@ -54,7 +62,7 @@ public class PieceVer3 extends EmployeeVer3 {
 
         return salary;
     }
-
+    @Override
     public void display() {
         System.out.println("Piece Employee: ");
         super.display();

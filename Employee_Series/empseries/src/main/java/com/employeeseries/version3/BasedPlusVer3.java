@@ -26,6 +26,11 @@ public class BasedPlusVer3 extends CommissionVer3 {
         super(name, id,totalSales);
         this.baseSalary = 0; // Initialize baseSalary as needed
     }
+    public BasedPlusVer3(Name name, MyDate hire, MyDate dob, int id, int totalSales, double baseSalary) {
+        super(name, hire, dob, id, totalSales);
+        this.baseSalary = baseSalary;
+    }
+    
 
     public double getBaseSalary() {
         return baseSalary;
@@ -39,7 +44,7 @@ public class BasedPlusVer3 extends CommissionVer3 {
     public double computeSalary() {
         return this.baseSalary + super.computeSalary();
     }
-
+    @Override
     public void display() {
         System.out.println("Based Commission Employee: " + toString() + "Computed Salary: " + computeSalary() + "\n");
     }

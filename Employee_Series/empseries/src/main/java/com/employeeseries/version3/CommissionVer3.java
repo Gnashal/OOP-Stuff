@@ -32,6 +32,13 @@ public class CommissionVer3 extends EmployeeVer3 {
         super(name, id);
         this.totalSales = totalSales;
     }
+    public CommissionVer3(Name name, MyDate hire, MyDate dob, int id, int totalSales) {
+        super(name, id);
+        super.setBirthDate(dob);
+        super.setDateHired(hire);
+        this.totalSales = totalSales;
+    }
+    
 
     public int getTotalSales() {
         return totalSales;
@@ -56,6 +63,7 @@ public class CommissionVer3 extends EmployeeVer3 {
         return salary;
     }
 
+    @Override
     public void display() {
         System.out.println("Commission Employee: " + toString() + "Computed Salary: " + computeSalary() + "\n");
     }

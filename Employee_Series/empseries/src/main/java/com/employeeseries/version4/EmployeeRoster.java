@@ -4,34 +4,43 @@ import com.employeeseries.version3.*;
 
 public class EmployeeRoster {
     private int max;
-    private EmployeeVer3[] empList = new EmployeeVer3[max];
-    private int count;
+    public EmployeeVer3[] empList; 
+    private int count = 0;
 
     public EmployeeRoster() {
 
     }
     public EmployeeRoster(int max) {
         this.max = max;
+        empList = new EmployeeVer3[max];
+    }
+    public void setMax(int max) {
+        this.max = max;
+    }
+    public int getMax() {
+        return max;
     }
 
     public boolean addEmployee(EmployeeVer3 newEmp) {
         if (count < max) {
             empList[count++] = newEmp;
             return true;
+        } else {
+            return false;
         }
-        return false;
     }
     public EmployeeVer3 removeEmployee(int id) {
         EmployeeVer3 removedEmp = new EmployeeVer3();
         if (count >= 0) {
             for (int i = 0; i < count; ++i) {
-                if (empList[i].id == id) {
+                if (empList[i].getId() == id) {
                     removedEmp = empList[i];
-                    for ( int j = i; j < count; ++j) {
+                    for ( int j = i; j < count - 1; ++j) {
                         empList[j] = empList[j + 1];
                     }
                     empList[count - 1] = null;
                     --count;
+                    break;
                 }
             }
         }
@@ -105,7 +114,7 @@ public class EmployeeRoster {
 
     public void displayAllEmployees() {
         System.out.printf("%-10s | %-20s | %-15s | %-15s | %-10s | %-20s%n", 
-                          "ID", "NAME", "HIREDATE", "BIRTHDAY", "SALARY", "TYPE OF EMPLOYEE");
+        "ID", "NAME", "HIREDATE", "BIRTHDAY", "SALARY", "TYPE OF EMPLOYEE");
         System.out.println("------------------------------------------------------------------------------------------------------------------");
     
         for (int i = 0; i < count; i++) {
@@ -129,8 +138,8 @@ public class EmployeeRoster {
             }
     
             System.out.printf("%-10d | %-20s | %-15s | %-15s | $%-9.2f | %-20s%n", 
-                              emp.getId(), emp.empName.getFullName(), emp.getDateHired().getFullDate(), 
-                              emp.getBirthDate().getFullDate(), salary, type);
+            emp.getId(), emp.empName.getFname(), emp.getDateHired().getFullDate(), 
+            emp.getBirthDate().getFullDate(), salary, type);
         }
     }
     
