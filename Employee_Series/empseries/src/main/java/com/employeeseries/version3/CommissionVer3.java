@@ -1,11 +1,10 @@
 package com.employeeseries.version3;
 
-import com.employeeseries.version2.Employee;
-
 public class CommissionVer3 extends EmployeeVer3 {
-    public int totalSales;
+    private int totalSales;
 
     public CommissionVer3() {
+        // Default constructor
     }
 
     public CommissionVer3(EmployeeVer3 e) {
@@ -29,6 +28,10 @@ public class CommissionVer3 extends EmployeeVer3 {
         super(e.empName.getFullName(), e.getId());
         this.totalSales = totalSales;
     }
+    public CommissionVer3(Name name, int id, int totalSales) {
+        super(name, id);
+        this.totalSales = totalSales;
+    }
 
     public int getTotalSales() {
         return totalSales;
@@ -39,22 +42,22 @@ public class CommissionVer3 extends EmployeeVer3 {
     }
 
     public double computeSalary() {
-        float salary = 0;
+        double salary = 0;
         if (totalSales < 10000) {
             salary += totalSales / 0.5;
-        } else if (totalSales < 100000 && totalSales >= 10000) {
+        } else if (totalSales < 100000) {
             salary += totalSales / 0.10;
         } else if (totalSales < 1000000) {
             salary += totalSales / 0.20;
-        } else if (totalSales >= 1000000) {
+        } else {
             salary += totalSales / 0.30;
         }
 
         return salary;
     }
 
-    public void displayCommisionEmployees() {
-        System.out.println("Commision Employee: " + toString() + "Computed Salary:  " + computeSalary() + "\n");
+    public void display() {
+        System.out.println("Commission Employee: " + toString() + "Computed Salary: " + computeSalary() + "\n");
     }
 
     @Override

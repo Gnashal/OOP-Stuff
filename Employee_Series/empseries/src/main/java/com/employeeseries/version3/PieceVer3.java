@@ -55,7 +55,7 @@ public class PieceVer3 extends EmployeeVer3 {
         return salary;
     }
 
-    public void displayPieceEmployees() {
+    public void display() {
         System.out.println("Piece Employee: ");
         super.display();
         System.out.println("Computed Salary: " + computeSalary() + "\n");

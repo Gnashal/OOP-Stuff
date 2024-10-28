@@ -175,9 +175,9 @@ public class Main {
     employee2.display();
 
     HourlyVer3 hourlyEmpV3_1 = new HourlyVer3(42.00f, 900.23, employee1);
-    hourlyEmpV3_1.displayHourlyEmployees();
+    hourlyEmpV3_1.display();
     PieceVer3 pieceEmpV3_1 = new PieceVer3(employee2, 300, 25.43);
-    pieceEmpV3_1.displayPieceEmployees();
+    pieceEmpV3_1.display();
   }
 
 }

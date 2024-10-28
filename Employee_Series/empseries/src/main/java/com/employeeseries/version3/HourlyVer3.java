@@ -63,7 +63,8 @@ public class HourlyVer3 extends EmployeeVer3{
 
         return salary;
     }
-    public void displayHourlyEmployees() {
+    @Override
+    public void display() {
         System.out.println("Hourly Employee: ");
         super.display();
         System.out.println("Computed Salary: " + computeSalary() + "\n");
