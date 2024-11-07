@@ -1,7 +1,7 @@
 package com.employeeseries.version2;
 
 public class Piece extends Employee {
-    private int totalPiecesFinished;
+    private int totalPiecesFinished; 
     private double ratePerPiece;
 
     public Piece() {
