@@ -247,4 +247,33 @@ public class Main {
       removedEmp.display();
     }
 
+  //   public static void testVersion6() {
+  //     com.employeeseries.version6.EmployeeRoster empRoster = new com.employeeseries.version6.EmployeeRoster();
+  //     com.employeeseries.version6.Employee[] employees = new com.employeeseries.version6.Employee[] {
+  //       new HourlyVer3(new Name("John", "Doe"), new MyDate(1, 1, 2020), new MyDate(1, 1, 1990), 1001, 20.0f, 40),
+  //       new CommissionVer3(new Name("Jane", "Dee"), new MyDate(2, 1, 2020), new MyDate(2, 1, 1990), 1002, 3000),
+  //       new BasedPlusVer3(new Name("Jim", "Beam"), new MyDate(3, 1, 2020), new MyDate(3, 1, 1990), 1003, 2000, 500),
+  //       new PieceVer3(new Name("Jack", "Daniels"), new MyDate(4, 1, 2020), new MyDate(4, 1, 1990), 1004, 150, 25.0),
+  //       new HourlyVer3(new Name("Sarah", "Connor"), new MyDate(5, 1, 2020), new MyDate(5, 1, 1990), 1005, 22.5f, 35),
+  //       new CommissionVer3(new Name("Kyle", "Reese"), new MyDate(6, 1, 2020), new MyDate(6, 1, 1990), 1006, 4000),
+  //       new BasedPlusVer3(new Name("T800", "Terminator"), new MyDate(7, 1, 2020), new MyDate(7, 1, 1990), 1007, 2500, 600),
+  //       new PieceVer3(new Name("Ellen", "Ripley"), new MyDate(8, 1, 2020), new MyDate(8, 1, 1990), 1008, 200, 30.0),
+  //       new HourlyVer3(new Name("Neo", "Anderson"), new MyDate(9, 1, 2020), new MyDate(9, 1, 1990), 1009, 30.0f, 40),
+  //       new CommissionVer3(new Name("Morpheus", "Smith"), new MyDate(10, 1, 2020), new MyDate(10, 1, 1990), 1010, 3500),
+  //       new BasedPlusVer3(new Name("Trinity", "Hacker"), new MyDate(11, 1, 2020), new MyDate(11, 1, 1990), 1011, 3000, 800),
+  //       new PieceVer3(new Name("Darth", "Vader"), new MyDate(12, 1, 2020), new MyDate(12, 1, 1990), 1012, 250, 40.0),
+  //       new HourlyVer3(new Name("Luke", "Skywalker"), new MyDate(13, 1, 2020), new MyDate(13, 1, 1990), 1013, 28.0f, 45),
+  //       new CommissionVer3(new Name("Leia", "Organa"), new MyDate(14, 1, 2020), new MyDate(14, 1, 1990), 1014, 4500),
+  //       new BasedPlusVer3(new Name("Han", "Solo"), new MyDate(15, 1, 2020), new MyDate(15, 1, 1990), 1015, 3200, 700),
+  //   };
+
+  //   for (int i = 0; i < employees.length; ++i) {
+  //       empRoster.addEmployee(employees[i]);
+    
+  //   empRoster.displayAllEmployees();
+  //   EmployeeVer3 removedEmp = empRoster.removeEmployee(employees[5].getId());
+  //   removedEmp.display();
+  //   }
+  // }
+
 }

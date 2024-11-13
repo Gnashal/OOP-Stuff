@@ -67,8 +67,6 @@ public abstract class Employee implements ComputeSalary{
         System.out.println();
     }
 
-    public abstract double computeSalary();
-
     @Override
     public String toString() {
         return "Name: " + empName.fname + " " + empName.mname + " " + empName.lname;
