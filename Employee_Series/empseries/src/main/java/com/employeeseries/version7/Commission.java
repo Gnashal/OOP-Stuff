@@ -1,6 +1,6 @@
-package com.employeeseries.version6;
+package com.employeeseries.version7;
 
-public class Commission extends Employee {
+public class Commission extends Employee{
     private int totalSales;
 
     public Commission() {

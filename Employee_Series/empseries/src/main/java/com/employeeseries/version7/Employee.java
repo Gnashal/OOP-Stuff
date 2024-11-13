@@ -1,6 +1,6 @@
-package com.employeeseries.version6;
+package com.employeeseries.version7;
 
-public abstract class Employee {
+public abstract class Employee implements ComputeSalary{
     public Name empName;
     public MyDate dateHired;
     public MyDate birthDate;

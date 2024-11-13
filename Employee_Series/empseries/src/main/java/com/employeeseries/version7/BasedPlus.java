@@ -1,7 +1,7 @@
-package com.employeeseries.version6;
+package com.employeeseries.version7;
 
 
-public class BasedPlus extends Commission {
+public class BasedPlus extends Commission{
     private double baseSalary;
 
     public BasedPlus() {
